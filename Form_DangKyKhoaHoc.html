@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đăng Ký Khóa Học</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Đăng kí khóa học</h1>
+        <div class="user-actions">
+            <h2>Hi,Username</h2>
+            <button class="logout">Logout</button>
+        </div>
+    </div>
+
+    <form action="/paymentPage" method="POST">
+        <fieldset>
+            <legend>Thông Tin Người Mua</legend>
+
+            <label for="fullName">Họ và Tên:</label>
+            <input type="text" id="fullName" name="fullName" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="phone">Số Điện Thoại:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Thông Tin Khóa Học</legend>
+
+            <label for="course">Chọn Khóa Học:</label>
+            <select id="course" name="course" required>
+                <option value="web-development">Lập Trình Web</option>
+                <option value="software-engineering">Công nghệ phần mềm</option>
+                <option value="e-commerce">Thương mại điện tử</option>
+                <option value="database-management">Hệ quản trị cơ sở dữ liệu</option>
+                <option value="machine-learning">Học máy</option>
+                <option value="imformation-security">An toàn thông tin</option>
+            </select><br><br>
+
+            <label for="quantity">Số Lượng:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1" required><br><br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Thông Tin Thanh Toán</legend>
+
+            <label for="paymentMethod">Phương Thức Thanh Toán:</label>
+            <select id="paymentMethod" name="paymentMethod" required>
+                <option value="credit-card">Thẻ Tín Dụng</option>
+                <option value="QRCode">Mã QR</option>
+                <option value="bank-transfer">Chuyển Khoản Ngân Hàng</option>
+            </select><br><br>
+
+            <label for="cardNumber">Số Thẻ:</label>
+            <input type="text" id="cardNumber" name="cardNumber"><br><br>
+
+            <label for="expiryDate">Ngày Hết Hạn:</label>
+            <input type="month" id="expiryDate" name="expiryDate"><br><br>
+
+            <label for="amount">Số tiền:</label>
+            <input type="text" id="amount" name="amount"><br><br>
+
+        </fieldset>
+
+        <button type="submit">Thanh toán</button>
+    </form>
+</body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        width: 100%;
+        padding: 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .header h1 {
+        margin-left: 20px;
+        font-size: 24px;
+    }
+
+    .user-actions {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+    }
+
+    .user-actions h2 {
+        margin-right: 15px;
+        font-size: 14px;
+    }
+
+    .logout {
+        background-color: #dc3545;
+        color: #fff;
+        border: none;
+        padding: 4px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .logout:hover {
+        background-color: #c82333;
+    }
+
+    form {
+        background-color: white;
+        width: 100%;
+        max-width: 600px;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    fieldset {
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+    }
+
+    legend {
+        font-weight: bold;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    label {
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        font-size: 16px;
+    }
+
+    input {
+        width: 96%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+        background-color: #28a745;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #218838;
+    }
+</style>
+</html>
